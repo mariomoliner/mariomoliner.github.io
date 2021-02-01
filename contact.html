@@ -29,7 +29,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         height: 100%;
         width: 100%;
         margin: 0%;
-        background-color: cadetblue;
+        background-color: white;
         font-family: 'Raleway', sans-serif;
     }
 
@@ -37,12 +37,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         font-family: 'Play', sans-serif;
         margin: 0%;
         margin-top: 0%;
+        background-color: cadetblue;
         padding-top: 10px;
         padding-bottom: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 10%;
+        height: 10%;        
     }
 
     #content_back{
@@ -60,13 +61,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
     #footer{
         display: flex;
+        background-color: cadetblue;
         justify-content: center;
         padding-top: 10pt;
         padding-bottom: 10pt;
     }
 
     .contentplace{
-        width: 80%;
+        width: 100%;
         height: 100%;
         margin: 0px;
         border: 0px;
@@ -75,18 +77,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         box-sizing: border-box;
     }
     .navigator{
+        display: none;
+
+    }
+
+    .nav_mobile{
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 20%;
-        height: 100%;
-        padding-top: 10px;
-        margin: 0px;
-        border: 0px;
+        justify-content: center;
+
     }
 
     a {
-        display: block;
+        display: inline;
         margin: 10pt;
     }
 
@@ -102,7 +104,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
     a:visited{
         color: black;
-        font-size: 12pt;
     }
 
     ul {
@@ -110,13 +111,54 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         display: block;
     }
 
+    @media only screen and (min-width: 900px){
+        .contentplace{
+            width: 80%;
+            height: 100%;
+            margin: 0px;
+            border: 0px;
+            float: left;
+            padding: 20pt;
+            box-sizing: border-box;
+        }
+        .navigator{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 20%;
+            height: 100%;
+            padding-top: 10px;
+            margin: 0px;
+            border: 0px;
+        }
+
+        .nav_mobile{
+            display: none;
+        }
+
+        a {
+        display: block;
+        margin: 10pt;
+    }
+    }
+
+
+
+
+
 </style>
 <body>
     <section id=headers>
-        <h1 style="font-size: 20pt;"> Mario Moliner</h1>
+        <a href="/index.html" style="font-size: 20pt;
+        text-decoration:none">Mario Moliner</a>
+
     </section>
 
     <section id=content_back>
+    <div class="nav_mobile">
+            <a href="/contact.html">Geschriebenes</a>
+            <a href="/contact.html">Kontakt</a>        
+    </div>
     <div class=content>
         <div class="contentplace">
             <p>
@@ -126,12 +168,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                 mario.moliner@gmail.com 
             </p>
 
-
         </div>
         <div class="navigator">  
 
         <ul>
-            <li><a href="#Geschriebenes">Geschriebenes</a></li>
+            <li><a href="/contact.html">Geschriebenes</a></li>
             <li><a href="#Kontakt">Kontakt</a></li>           
         </ul>
 
